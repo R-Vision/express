@@ -121,7 +121,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('ETag', 'W/"7ff-fFD7Se+Vsq6deAl063thow"')
+      .expect('ETag', 'W/"7ff-15a8bBz9U9/9xOjl5G6N3c+ZIBk"')
       .expect(200, done);
     })
 
@@ -403,7 +403,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('ETag', 'W/"7ff-fFD7Se+Vsq6deAl063thow"')
+        .expect('ETag', 'W/"7ff-15a8bBz9U9/9xOjl5G6N3c+ZIBk"')
         .expect(200, done);
       });
 
@@ -485,7 +485,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('ETag', '"d-Otu60XkfuuPskIiUxJY4cA"')
+        .expect('ETag', '"d-HwnTDHB9U/PRbFMN1z1wps51lqk"')
         .expect(200, done);
       })
     })
@@ -502,7 +502,7 @@ describe('res', function(){
 
         request(app)
         .get('/')
-        .expect('ETag', 'W/"d-Otu60XkfuuPskIiUxJY4cA"')
+        .expect('ETag', 'W/"d-HwnTDHB9U/PRbFMN1z1wps51lqk"')
         .expect(200, done)
       })
     })

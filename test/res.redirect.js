@@ -85,7 +85,7 @@ describe('res', function(){
       .set('Accept', 'text/html')
       .end(function(err, res){
         res.headers.should.have.property('location', 'http://google.com');
-        res.text.should.equal('<p>Moved Temporarily. Redirecting to <a href="http://google.com">http://google.com</a></p>');
+        res.text.should.equal('<p>Found. Redirecting to <a href="http://google.com">http://google.com</a></p>');
         done();
       })
     })
@@ -102,7 +102,7 @@ describe('res', function(){
       .set('Host', 'http://example.com')
       .set('Accept', 'text/html')
       .end(function(err, res){
-        res.text.should.equal('<p>Moved Temporarily. Redirecting to <a href="/&lt;lame&gt;">/&lt;lame&gt;</a></p>');
+        res.text.should.equal('<p>Found. Redirecting to <a href="/&lt;lame&gt;">/&lt;lame&gt;</a></p>');
         done();
       })
     })
@@ -121,8 +121,8 @@ describe('res', function(){
       .set('Accept', 'text/plain, */*')
       .end(function(err, res){
         res.headers.should.have.property('location', 'http://google.com');
-        res.headers.should.have.property('content-length', '51');
-        res.text.should.equal('Moved Temporarily. Redirecting to http://google.com');
+        res.headers.should.have.property('content-length', '39');
+        res.text.should.equal('Found. Redirecting to http://google.com');
         done();
       })
     })
@@ -139,7 +139,7 @@ describe('res', function(){
       .set('Host', 'http://example.com')
       .set('Accept', 'text/plain, */*')
       .end(function(err, res){
-        res.text.should.equal('Moved Temporarily. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E');
+        res.text.should.equal('Found. Redirecting to http://example.com/?param=%3Cscript%3Ealert(%22hax%22);%3C/script%3E');
         done();
       })
     })
